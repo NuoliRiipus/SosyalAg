@@ -36,7 +36,7 @@ namespace API.Controllers
             userForRegisterDto.Username = userForRegisterDto.Username.ToLower();
 
             if (await _repo.UserExists(userForRegisterDto.Username))
-                return BadRequest("Username already exists");
+                return BadRequest("Bu isimde bir kullanıcı mevcut.");
 
             var userToCreate = new User
             {
