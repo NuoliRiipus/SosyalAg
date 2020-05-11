@@ -1,16 +1,16 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-primary">
   <div class="container">
-    <a class="navbar-brand" href="#">SosyalAg</a>
+    <a class="navbar-brand" [routerLink]="['/home']">SosyalAg</a>
 
     <ul *ngIf="loggedIn()" class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Kullanıcılar</a>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/members']">Kullanıcılar</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Listeler</a>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/lists']">Listeler</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Mesajlar</a>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/messages']">Mesajlar</a>
       </li>
     </ul>
 
