@@ -1,0 +1,54 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <img class="card-img-top img-thumbnail" src="{{user.photoUrl}}" alt="{{user.knownAs}}">
+        <div class="card-body">
+          <div>
+            <strong>Yaşadığı yer:</strong>
+            <p>{{user.city}}, {{user.country}}</p>
+          </div>
+          <div>
+            <strong>Yaş:</strong>
+            <p>{{user.age}}</p>
+          </div>
+          <div>
+            <strong>Son aktif olduğu zaman:</strong>
+            <p>{{user.lastActive}}</p>
+          </div>
+          <div>
+            <strong>Katıldığı tarih:</strong>
+            <p>{{user.created}}</p>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="btn-group d-flex">
+            <button class="btn btn-primary w-100">Beğen</button>
+            <button class="btn btn-success w-100">Mesaj</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="tab-panel">
+        <tabset class="member-tabset">
+          <tab heading="{{user.knownAs}}">
+            <h4>Açıklama</h4>
+            <p>{{user.introduction}}</p>
+            <h4>Aradıkları</h4>
+            <p>{{user.lookingFor}}</p>
+          </tab>
+          <tab heading="İlgilendikleri">
+            <p>{{user.interests}}</p>
+          </tab>
+          <tab heading="Fotoğraflar">
+            <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+          </tab>
+          <tab heading="Mesajlar">
+            <p>Mesajlar</p>
+          </tab>
+        </tabset>
+      </div>
+    </div>
+  </div>
+</div>
