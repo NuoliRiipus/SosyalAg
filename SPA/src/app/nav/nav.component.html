@@ -19,7 +19,7 @@
         {{authService.decodedToken?.unique_name | titlecase}}</a>
 
       <div class="dropdown-menu mt-4" *dropdownMenu>
-        <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profilini düzenle</a>
+        <a class="dropdown-item" [routerLink]="['/member/edit']"><i class="fa fa-user"></i> Profilini düzenle</a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item"  (click)="logout()"><i class="fa fa-sign-out"></i> Çıkış yap</a>
       </div>
